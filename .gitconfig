@@ -1,0 +1,36 @@
+[user]
+	signingkey = 569D6139EF8E734B
+	name = Guille Vigil
+	email = guillermovigilr@gmail.com
+[commit]
+	gpgsign = true
+[pull]
+	ff = only
+[credential]
+	helper = osxkeychain
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
+[gpg]
+	program = gpg1
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /Users/guillermotti/.gitignore_global
+	editor = code --wait
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[sequence]
+	editor = interactive-rebase-tool
+[init]
+	defaultBranch = main

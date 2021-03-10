@@ -12,8 +12,7 @@ for f in .zshrc \
 	.editorconfig \
 	.gitconfig \
 	.gitignore_global \
-	.kubectl_aliases \
-	.tmux.conf; do
+	.kubectl_aliases; do
 	if [ -f "$HOME/$f" ]; then rm "$HOME/$f"; fi
 	ln -sf "$SCRIPT_DIR/$f" "$HOME/$f"
 done

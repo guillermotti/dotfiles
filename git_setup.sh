@@ -2,13 +2,13 @@
 set -euo pipefail
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-EMAIL_1="contact"
-EMAIL_2="guillermotti.com"
+EMAIL_1="guillermovigilr"
+EMAIL_2="gmail.com"
 
 set -x
 
 # author
-git config --global user.name "Ahmet Alp Balkan"
+git config --global user.name "Guille Vigil"
 git config --global user.email "${EMAIL_1}@${EMAIL_2}"
 
 # pull strategy

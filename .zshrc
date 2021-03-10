@@ -8,7 +8,9 @@ export ZSH="/Users/guillermotti/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+ZSH_DISABLE_COMPFIX="true"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,16 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
-# Kube-ps1
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-PROMPT='$(kube_ps1)'$PROMPT
-KUBE_PS1_SYMBOL_USE_IMG=true
-KUBE_PS1_SEPARATOR='--> '
-
+# Golang env
 export GOPATH=$HOME/Go
 export PATH=$PATH:$GOPATH/bin
 
@@ -123,10 +116,15 @@ if [ -f '/Users/guillermotti/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gu
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/guillermotti/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/guillermotti/google-cloud-sdk/completion.zsh.inc'; fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Kube-ps1
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PROMPT='$(kube_ps1)'$PROMPT
+KUBE_PS1_SYMBOL_USE_IMG=true
+KUBE_PS1_SEPARATOR='--> '
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/guillermotti/.sdkman"
-[[ -s "/Users/guillermotti/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/guillermotti/.sdkman/bin/sdkman-init.sh"
+# GPG integration: https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
+if [ -f "$HOME/.gnupg/gpg_profile" ] && command -v gpg-agent > /dev/null; then
+  source "$HOME/.gnupg/gpg_profile"
+else
+  log "WARNING: skipping loading gpg-agent"
+fi

@@ -2,12 +2,25 @@
 
 ## Package manager
 
-- Install Homebrew to `$HOME/.homebrew` instead of /usr/local:
+- Install Homebrew 
 
-      git clone https://github.com/Homebrew/brew.git $HOME/.homebrew
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 - Run `which brew` to confirm the one in home directory is picked up.
 - Run `brew analytics off`
+
+## Shell
+
+- Install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
+- Install powerlevel10k theme: https://github.com/romkatv/powerlevel10k
+- Install plugins:
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+## Moving config files to ~/
+
+- Run `chmod +x install_symlinks.sh` to be able to run the script.
+- Run `./install_symlinks.sh`
 
 ## Installing software via Homebrew
 
@@ -18,27 +31,11 @@ To install all the software, add it to `.Brewfile` and run:
 
     brew bundle --global
 
-Some stuff will take long, in that case, identify which packages and update
-`.Brewfile` to install them with `args: ['force-bottle']` or do a one-off
-`brew install --force-bottle [pkg]` install.
-
-Some things that require manual installation after Homebrew:
-
-```sh
-# if pip requires sudo, something is wrong, because the
-# Homebrew bundle should install a $USER-writable over system-python.
-    
-pip install virtualenv
-pip install virtualenvwrapper
-```
-
 ## OS Settings
 
 - Run `mac_setup.sh` script.
+- Restart the laptop to apply changes.
 
-## Shell
-
-Install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 
 ## Installing software manually
 
@@ -56,15 +53,13 @@ Install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
   - Set Clipy key to <kbd>Cmd</kbd>+<kbd>Ñ</kbd>
 - **Middleclick** 
   - Launch at Login
+- **Open In Code**
+  - Press and hold CMD meanwhile add the icon from Applications to the Finder tab
 
 ## Settings Sync
 
-- Clone this repo and run `install_symlinks.sh`
-    - Open a new terminal to take effect.
-- iTerm2->Preferences->Load Preferences From: com.googlecode.iterm2.plist directory.
+- iTerm2->Profiles->Open Profiles->Edit Profiles...->Add `default-profile-iterm2.json`.
     - Restart iTerm2.
-
-- For GPG instructions, follow [.gnupg/README](.gnupg/README) file.
 
 - VSCode:
   - Install "Settings Sync" extension and reload.
@@ -75,30 +70,31 @@ Install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
   - Create a token with 'gist' permissions and save it to the prompt
   - Wait for the Sync Summary.
 
+- For GPG instructions, follow [.gnupg/README](.gnupg/README) file.
+
 ## Git Setup
 
-Run:
+- Run:
 
+    ```sh
+    chmod +x git_setup.sh
     ./git_setup.sh
+    ```
 
-Generate key with a password:
+- Generate key with a password:
 
     ssh-keygen -f $HOME/.ssh/github_rsa
 
-(You may want to redact hostname from the public key.)
-
-Add key to the keychain:
+- Add key to the keychain:
 
     ssh-add $HOME/.ssh/github_rsa          # company-installed
     /usr/bin/ssh-add $HOME/.ssh/github_rsa # system
 
-Upload the key to GitHub. https://github.com/settings/keys :
+- Upload the key to GitHub. https://github.com/settings/keys :
 
     cat ~/.ssh/github_rsa.pub| pbcopy
 
-Save this to ~/.ssh/config:
-
-Test connection:
+- Test connection:
 
     ssh -T git@github.com -i ~/.ssh/github_rsa
 
