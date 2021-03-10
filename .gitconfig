@@ -11,7 +11,7 @@
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
 [gpg]
-	program = gpg1
+	program = gpg
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/guillermotti/.gitignore_global
