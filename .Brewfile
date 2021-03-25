@@ -50,26 +50,34 @@ brew "helm"
 brew "minikube"
 cask "docker"
 
-# Desktop Software
+# VMs
+cask "virtualbox"
+cask "vagrant"
+cask "vagrant-manager"
+
+# Development
 cask "visual-studio-code"
+cask "open-in-code"
+cask "insomnia"
+
+# Tools
+cask "authy"
+cask "clipy"
+cask "middleclick"
+cask "tunnelblick"
+cask "rectangle"
+# cask "recordit"
+
+# Desktop Software
+cask "iterm2"
 cask "zoom"
 cask "slack"
 cask "spotify"
 cask "google-chrome"
-cask "authy"
-cask "clipy"
-cask "insomnia"
-cask "iterm2"
-cask "middleclick"
-cask "tunnelblick"
-cask "rectangle"
-cask "open-in-code"
+cask "firefox"
 cask "telegram"
 cask "notion"
 cask "drawio"
 # cask "microsoft-office"
 # cask "microsoft-auto-update"
 # cask "steam"
-# cask "virtualbox"
-# cask "firefox"
-# cask "recordit"
