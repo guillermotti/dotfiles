@@ -4,6 +4,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
 tap "warrensbox/tap"
+tap "norwoodj/tap"
 
 # Development & Power Tools
 brew "bash"
