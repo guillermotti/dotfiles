@@ -48,7 +48,7 @@ brew "kubectx"
 brew "kube-ps1"
 brew "kustomize"
 brew "helm"
-brew "helm-docs"
+brew "norwoodj/tap/helm-docs"
 brew "minikube"
 cask "docker"
 
