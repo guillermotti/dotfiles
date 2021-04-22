@@ -136,6 +136,22 @@ fi
 export GPG_TTY=$(tty)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Homebrew install path customization
+export HOMEBREW="$HOME/.homebrew"
+if [ ! -d "$HOMEBREW" ]; then
+  # fallback
+  export HOMEBREW=/usr/local
+fi
+
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+
+PATH="$HOMEBREW/bin:$HOMEBREW/sbin:$PATH"
+
+# Add zsh completion scripts installed via Homebrew
+fpath=("$HOMEBREW/share/zsh-completions" $fpath)
+fpath=("$HOMEBREW/share/zsh/site-functions" $fpath)
+
 # gcloud completion scripts via brew cask installation
 if [ -f "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then # brew cask installation
 	export CLOUDSDK_PYTHON="/$HOMEBREW/opt/python@3.8/libexec/bin/python"
