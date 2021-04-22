@@ -135,3 +135,12 @@ fi
 
 export GPG_TTY=$(tty)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# gcloud completion scripts via brew cask installation
+if [ -f "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then # brew cask installation
+	export CLOUDSDK_PYTHON="/$HOMEBREW/opt/python@3.8/libexec/bin/python"
+	source "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+	source "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+else
+	log "WARNING: skipping loading gcloud completion"
+fi
