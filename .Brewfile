@@ -14,6 +14,7 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "wget"
 brew "coreutils"
+brew 'diff-so-fancy'
 brew "fzf"
 brew "gawk"
 brew "jq"
