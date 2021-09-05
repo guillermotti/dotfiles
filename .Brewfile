@@ -39,6 +39,7 @@ cask "google-cloud-sdk"
 brew "mongodb/brew/mongodb-community"
 brew "postgresql"
 brew "redis"
+brew "firebase-cli"
 
 # Commit signing
 brew 'pinentry-mac'
@@ -54,6 +55,7 @@ brew "kubeval"
 brew "helm"
 brew "norwoodj/tap/helm-docs"
 brew "minikube"
+brew "kind"
 cask "docker"
 
 # VMs
