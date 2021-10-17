@@ -6,9 +6,3 @@ HostName github.com
 User git
 IdentityFile ~/.ssh/github_rsa
 UseKeychain yes
-
-Host bitbucket.org *.bitbucket.org
-HostName bitbucket.org
-User git
-IdentityFile ~/.ssh/bitbucket_rsa
-UseKeychain yes

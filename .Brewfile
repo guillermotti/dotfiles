@@ -40,6 +40,7 @@ brew "mongodb/brew/mongodb-community"
 brew "postgresql"
 brew "redis"
 brew "firebase-cli"
+brew "lsd"
 
 # Commit signing
 brew 'pinentry-mac'
@@ -65,7 +66,7 @@ cask "vagrant-manager"
 
 # Development
 cask "visual-studio-code"
-cask "open-in-code"
+# cask "open-in-code"
 cask "insomnia"
 
 # Tools
@@ -84,7 +85,7 @@ cask "spotify"
 cask "google-chrome"
 cask "firefox"
 cask "telegram"
-cask "notion"
+# cask "notion"
 cask "drawio"
 # cask "microsoft-office"
 # cask "microsoft-auto-update"
