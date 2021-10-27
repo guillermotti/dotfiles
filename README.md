@@ -77,19 +77,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 ## Installing software manually
 
 - [Leapp](https://www.leapp.cloud/)
+- [nvm](https://github.com/nvm-sh/nvm)
+
+```sh  
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+```
 
 ## Post-Installation Configuration
 
-- **Rectangle**
-  - Security->Accessibility: Give access
-  - Launch at Login
-- **Clipy**
-  - Launch at Login
-  - Hide from Menu Bar
-  - Set history size to 200
-  - Number of items place inline to 200
-  - Number of characters in the menu to 50
-  - Set Clipy key to <kbd>Cmd</kbd>+<kbd>Ñ</kbd>
+- **Raycast**
+  - Import config from *.rayconfig
 - **Middleclick** 
   - Launch at Login
 - **Open In Code**

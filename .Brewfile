@@ -25,7 +25,6 @@ brew "tree"
 brew "go"
 brew "python3"
 brew "node"
-brew "nvm"
 brew "yarn"
 brew "gradle"
 brew "maven"
@@ -41,6 +40,8 @@ brew "postgresql"
 brew "redis"
 brew "firebase-cli"
 brew "lsd"
+brew "pass"
+brew "imagemagick"
 
 # Commit signing
 brew 'pinentry-mac'
@@ -60,6 +61,7 @@ brew "kind"
 cask "docker"
 
 # VMs
+brew "lima"
 cask "virtualbox"
 cask "vagrant"
 cask "vagrant-manager"
@@ -71,10 +73,8 @@ cask "insomnia"
 
 # Tools
 cask "authy"
-cask "clipy"
 cask "middleclick"
 cask "tunnelblick"
-cask "rectangle"
 # cask "recordit"
 
 # Desktop Software
@@ -85,8 +85,10 @@ cask "spotify"
 cask "google-chrome"
 cask "firefox"
 cask "telegram"
+cask "discord"
 # cask "notion"
 cask "drawio"
+cask "raycast"
 # cask "microsoft-office"
 # cask "microsoft-auto-update"
 # cask "steam"
