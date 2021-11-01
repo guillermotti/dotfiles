@@ -42,6 +42,7 @@ brew "firebase-cli"
 brew "lsd"
 brew "pass"
 brew "imagemagick"
+brew "git-xargs"
 
 # Commit signing
 brew 'pinentry-mac'
