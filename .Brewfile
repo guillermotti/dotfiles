@@ -43,6 +43,7 @@ brew "lsd"
 brew "pass"
 brew "imagemagick"
 brew "git-xargs"
+brew "nmap"
 
 # Commit signing
 brew 'pinentry-mac'
