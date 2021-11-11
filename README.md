@@ -87,6 +87,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 - **Raycast**
   - Import config from *.rayconfig
+  - Set directory to script commands
 - **Middleclick** 
   - Launch at Login
 - **Open In Code**
