@@ -5,6 +5,7 @@ tap "homebrew/services"
 tap "mongodb/brew"
 tap "warrensbox/tap"
 tap "norwoodj/tap"
+tap "caarlos0/tap"
 tap "instrumenta/instrumenta"
 
 # Development & Power Tools
@@ -44,6 +45,7 @@ brew "pass"
 brew "imagemagick"
 brew "git-xargs"
 brew "nmap"
+brew "org-stats"
 
 # Commit signing
 brew 'pinentry-mac'
