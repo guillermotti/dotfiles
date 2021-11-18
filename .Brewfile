@@ -72,6 +72,7 @@ cask "vagrant-manager"
 cask "visual-studio-code"
 # cask "open-in-code"
 cask "insomnia"
+cask "leapp"
 
 # Tools
 cask "authy"
