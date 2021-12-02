@@ -6,3 +6,13 @@ HostName github.com
 User git
 IdentityFile ~/.ssh/github_rsa
 UseKeychain yes
+
+Host *
+ServerAliveInterval 10
+ControlPath /tmp/ssh-%r@%h:%p
+ControlMaster auto
+ControlPersist yes
+AddKeysToAgent yes
+UseKeychain yes
+IdentityFile ~/.ssh/ec2_rsa
+User ubuntu
