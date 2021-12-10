@@ -174,3 +174,6 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias passpush="pass git add . && pass git commit -m 'New account.' && pass git push"
+
+export PATH=$PATH:$HOME/.linkerd2/bin
+export PATH=$PATH:$HOME/istio-1.6.8/bin

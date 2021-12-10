@@ -7,6 +7,7 @@ tap "warrensbox/tap"
 tap "norwoodj/tap"
 tap "caarlos0/tap"
 tap "instrumenta/instrumenta"
+tap "knative-sandbox/kn-plugins"
 
 # Development & Power Tools
 brew "bash"
@@ -63,6 +64,8 @@ brew "norwoodj/tap/helm-docs"
 brew "minikube"
 brew "kind"
 cask "docker"
+brew "kn"
+brew "knative-sandbox/kn-plugins/quickstart"
 
 # VMs
 brew "lima"
