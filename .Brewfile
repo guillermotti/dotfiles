@@ -81,7 +81,7 @@ cask "leapp"
 
 # Tools
 cask "authy"
-cask "middleclick"
+# cask "middleclick"
 cask "tunnelblick"
 # cask "recordit"
 
