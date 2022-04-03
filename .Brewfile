@@ -8,6 +8,7 @@ tap "norwoodj/tap"
 tap "caarlos0/tap"
 tap "instrumenta/instrumenta"
 tap "knative-sandbox/kn-plugins"
+tap "dagger/tap"
 
 # Development & Power Tools
 brew "bash"
@@ -67,6 +68,7 @@ cask "docker"
 brew "kn"
 brew "knative-sandbox/kn-plugins/quickstart"
 brew "opa"
+brew "dagger/tap/dagger"
 
 # VMs
 # brew "lima"
