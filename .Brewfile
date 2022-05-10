@@ -9,6 +9,7 @@ tap "caarlos0/tap"
 tap "instrumenta/instrumenta"
 tap "knative-sandbox/kn-plugins"
 tap "dagger/tap"
+tap "derailed/k9s"
 
 # Development & Power Tools
 brew "bash"
@@ -27,6 +28,7 @@ brew "telnet"
 brew "tree"
 brew "go"
 brew "python3"
+brew "gcc"
 # brew "node"
 brew "yarn"
 brew "gradle"
@@ -48,6 +50,7 @@ brew "imagemagick"
 brew "git-xargs"
 brew "nmap"
 brew "org-stats"
+brew "k6"
 
 # Commit signing
 brew 'pinentry-mac'
@@ -69,6 +72,8 @@ brew "kn"
 brew "knative-sandbox/kn-plugins/quickstart"
 brew "opa"
 brew "dagger/tap/dagger"
+brew "operator-sdk"
+brew "derailed/k9s/k9s"
 
 # VMs
 # brew "lima"
@@ -84,6 +89,7 @@ cask "insomnia"
 
 # Tools
 cask "authy"
+cask "fig"
 # cask "middleclick"
 # cask "tunnelblick"
 # cask "recordit"
