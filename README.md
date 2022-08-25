@@ -2,8 +2,9 @@
 
 ## Before formatting
 
+- Upload to drive existing files
 - Sync VSCode settings
-- Update files in gist (.npmrc, .yarnrc, .aws/config, .zsh_history)
+- Update important files in gist (.npmrc, .yarnrc, .aws/config, .zsh_history)
 
 ## Package manager
 
