@@ -1,5 +1,10 @@
 # Guillermotti's macOS Setup
 
+## Before formatting
+
+- Sync VSCode settings
+- Update files in gist (.npmrc, .yarnrc, .aws/config, .zsh_history)
+
 ## Package manager
 
 - Install Homebrew:
@@ -76,7 +81,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 
 ## Installing software manually
 
-- [Leapp](https://www.leapp.cloud/)
 - [nvm](https://github.com/nvm-sh/nvm)
 
 ```sh  
@@ -88,10 +92,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 - **Raycast**
   - Import config from *.rayconfig
   - Set directory to script commands
-- **Middleclick** 
-  - Launch at Login
-- **Open In Code**
-  - Press and hold CMD meanwhile add the icon from Applications to the Finder tab
 - **VSCode**
   - Install "Settings Sync" extension and reload.
   - Run '> Sync: Download Settings'
@@ -131,7 +131,7 @@ keybase pgp export -q <PUB-ID> | pbcopy
 
 5. Open https://github.com/settings/keys and paste the public key there.
 
-## Copy files from last Mac
+## Copy files from Gist
 
 - .zsh_history
 - .npmrc
@@ -142,8 +142,3 @@ keybase pgp export -q <PUB-ID> | pbcopy
 
 - Run `symlinks.sh` script.
 
-## Sources
-
-- https://github.com/alanzeino/dotfiles
-- https://github.com/ahmetb/dotfiles
-- https://gist.github.com/MatthewEppelsheimer/2269385
