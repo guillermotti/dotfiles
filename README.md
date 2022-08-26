@@ -4,7 +4,7 @@
 
 - Upload to drive existing files
 - Sync VSCode settings
-- Update important files in gist (.npmrc, .yarnrc, .aws/config, .zsh_history)
+- Update important files in gist (.npmrc, .yarnrc, .aws/config, .zsh_history, .kube/config)
 
 ## Package manager
 
@@ -32,7 +32,7 @@ ssh-add $HOME/.ssh/github_rsa # company-installed
 /usr/bin/ssh-add $HOME/.ssh/github_rsa # system
 ```
 
-- Upload the key to GitHub. https://github.com/settings/keys:
+- Upload the key to GitHub as authentication key & as signing key. https://github.com/settings/keys:
 
 ```sh
 cat ~/.ssh/github_rsa.pub| pbcopy
@@ -53,7 +53,7 @@ git clone git@github.com:guillermotti/dotfiles.git
 ## OS Settings
 
 - Run `mac_setup.sh` script.
-- Run `git_setup.sh` script.
+- Modify `git config --global user.signingkey` value with the public SSH key and run `git_setup.sh` script.
 - Restart the laptop to apply changes.
 
 ## Installing software via Homebrew
@@ -88,7 +88,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
-## Post-Installation Configuration
+## Post installation configuration
 
 - **Raycast**
   - Import config from *.rayconfig
@@ -102,35 +102,21 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
   - Create a token with 'gist' permissions and save it to the prompt
   - Wait for the Sync Summary.
 
-## GPG key
+## Pass Configuration
 
-1. Generate keys:
-
-```sh
-keybase pgp gen --multi
-```
-
-2. Run `gpg --list-signatures` and copy the serial numbernext to "sig" (it's 3B9A89CAE5009078 below):
-   
-```sh
-...
-sig          3B9A89CAE5009078 2021-01-31  Guille Vigil
-```
-
-3. Configure git to automatically gpgsign commits. This consists of pointing git to your signing key ID, and then enabling commit automatic signing.
+1. Import GPG key from the repository:
 
 ```sh
-git config --global user.signingkey <PUB-ID>
-git config --global commit.gpgsign true
+gpg --import private.asc
 ```
 
-4. Copy the publickey into your clipboard:
+2. Init pass following (this guide)[https://git.zx2c4.com/password-store/about/#EXTENDED%20GIT%20EXAMPLE]. Take into account:
 
-```sh
-keybase pgp export -q <PUB-ID> | pbcopy
-```
+- The argument following `pass init` should be the name of the imported key (guillermotti).
+- The git remote should be set with the existing repo and a `pass git pull` and `pass git reset --hard origin/main` point to the existing HEAD.
 
-5. Open https://github.com/settings/keys and paste the public key there.
+3. Use the tool and check everything is working.
+
 
 ## Copy files from Gist
 
@@ -138,6 +124,7 @@ keybase pgp export -q <PUB-ID> | pbcopy
 - .npmrc
 - .yarnrc
 - .aws/config
+- .kube/config
 
 ## Symlinks
 

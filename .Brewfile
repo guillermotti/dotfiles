@@ -15,8 +15,9 @@ tap "common-fate/granted"
 
 # Development & Power Tools
 brew "git"
-# brew "bash"
-# brew "bash-completion"
+brew "bash"
+brew "zsh"
+brew "bash-completion"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
@@ -64,8 +65,8 @@ brew "k6"
 brew "granted"
 
 # Commit signing
-# brew 'pinentry-mac'
-# brew 'gnupg'
+brew 'pinentry-mac'
+brew 'gnupg'
 # cask 'keybase'
 # brew 'gitsign'
 
