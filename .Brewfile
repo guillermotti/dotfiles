@@ -14,11 +14,12 @@ tap "common-fate/granted"
 # tap "sigstore/tap"
 
 # Development & Power Tools
+brew "git"
 # brew "bash"
 # brew "bash-completion"
-# brew "zsh-syntax-highlighting"
-# brew "zsh-autosuggestions"
-# brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"
+brew "zsh-completions"
 # brew "wget"
 # brew "coreutils"
 # brew 'diff-so-fancy'

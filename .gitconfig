@@ -1,5 +1,5 @@
 [user]
-	signingkey = BA22E9DAF1CD3824
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC71SQcd8BE3buRXFpvaTW8MgjFJ/W8vDwgde/fztweDFrXFEWWwmy51Ki66A4fIrNHIyINPJKqDsLN0wZ3IzVp89tFrWiJiFJvVeLxZWpqoymUf7kgCVcrlboBZ/P3upZ1spSef1RhPCVGaTDDgu3fHdOfJiO2WhFa+exrn4no0TuFwLthWva3aPxKneQlJ1EtrCr1llIZmYN+fLBD8GqhAHXeU1WpR+Tcdna0VTT2zWlh8zRyX2VgnMbdMs7QVpo+N3je2jMZhDOiJyVDoQoTFdZLDERRYOhtT3GRvUAVzG698SgSzP1+Rq00uWNKnC4pijaInKY2Hu1Gw7wrIDi9G1JYyKGoTCje0kAjC4VNY0WlWU82kQYp8hYX0+HqZhQJRum12HhIBmEoKImdrCZbYXeWQ2mPhZHomNK8r44GGOurkqiyUspRhQphnB1EAhSzK2SjeFD0ugZi8+pHbQZul7pqVcfhKY9Gx4aygs+sGej4Xl2zpssoVLD8Tuixtu0= guillermotti@guilles-mbp.lan
 	name = Guille Vigil
 	email = guillermovigilr@gmail.com
 [commit]
@@ -12,6 +12,7 @@
 	pushInsteadOf = https://github.com/
 [gpg]
 	program = gpg
+	format = ssh
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/guillermotti/.gitignore_global
@@ -34,3 +35,5 @@
 	editor = interactive-rebase-tool
 [init]
 	defaultBranch = main
+[tag]
+	gpgsign = true
