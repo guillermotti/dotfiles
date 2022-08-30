@@ -24,7 +24,7 @@ brew "zsh-completions"
 # brew "wget"
 # brew "coreutils"
 # brew 'diff-so-fancy'
-# brew "fzf"
+brew "fzf"
 # brew "gawk"
 # brew "jq"
 # brew "watch"
