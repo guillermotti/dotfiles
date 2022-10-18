@@ -57,6 +57,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias passpush="pass git add . && pass git commit -m 'New account.' && pass git push"
+alias tf="terraform"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
