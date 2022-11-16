@@ -12,6 +12,7 @@ tap "warrensbox/tap"
 # tap "stripe/stripe-cli"
 tap "common-fate/granted"
 # tap "sigstore/tap"
+tap "weaveworks/tap"
 
 # Development & Power Tools
 brew "git"
@@ -57,6 +58,7 @@ brew "pass"
 brew "k6"
 # brew "stripe"
 brew "argo"
+brew "argocd"
 # brew "pre-commit"
 # brew "tflint"
 # brew "tfsec"
@@ -87,6 +89,7 @@ cask "docker"
 # brew "operator-sdk"
 # brew "derailed/k9s/k9s"
 # cask "lens"
+brew "weaveworks/tap/eksctl"
 
 # VMs
 # brew "lima"
