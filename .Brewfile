@@ -62,7 +62,7 @@ brew "argocd"
 # brew "pre-commit"
 # brew "tflint"
 # brew "tfsec"
-# brew "terraform-docs"
+brew "terraform-docs"
 # brew "terragrunt"
 brew "granted"
 
