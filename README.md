@@ -88,6 +88,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
+- [krew](https://krew.sigs.k8s.io/docs/user-guide/setup/install/)
+
 ## Post installation configuration
 
 - **Raycast**
