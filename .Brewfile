@@ -28,7 +28,7 @@ brew 'diff-so-fancy'
 brew "fzf"
 # brew "gawk"
 # brew "jq"
-# brew "watch"
+brew "watch"
 # brew "telnet"
 # brew "tree"
 brew "go"
