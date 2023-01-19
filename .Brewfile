@@ -65,6 +65,7 @@ brew "argocd"
 brew "terraform-docs"
 # brew "terragrunt"
 brew "granted"
+brew "deno"
 
 # Commit signing
 brew 'pinentry-mac'
