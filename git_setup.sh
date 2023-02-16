@@ -19,7 +19,7 @@ git config --global credential.helper osxkeychain
 git config --global url.git\@github\.com\:.pushInsteadOf https://github.com/
 git config --global gpg.format ssh
 # change this ssh public key when has been recreated
-git config --global user.signingkey 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC71SQcd8BE3buRXFpvaTW8MgjFJ/W8vDwgde/fztweDFrXFEWWwmy51Ki66A4fIrNHIyINPJKqDsLN0wZ3IzVp89tFrWiJiFJvVeLxZWpqoymUf7kgCVcrlboBZ/P3upZ1spSef1RhPCVGaTDDgu3fHdOfJiO2WhFa+exrn4no0TuFwLthWva3aPxKneQlJ1EtrCr1llIZmYN+fLBD8GqhAHXeU1WpR+Tcdna0VTT2zWlh8zRyX2VgnMbdMs7QVpo+N3je2jMZhDOiJyVDoQoTFdZLDERRYOhtT3GRvUAVzG698SgSzP1+Rq00uWNKnC4pijaInKY2Hu1Gw7wrIDi9G1JYyKGoTCje0kAjC4VNY0WlWU82kQYp8hYX0+HqZhQJRum12HhIBmEoKImdrCZbYXeWQ2mPhZHomNK8r44GGOurkqiyUspRhQphnB1EAhSzK2SjeFD0ugZi8+pHbQZul7pqVcfhKY9Gx4aygs+sGej4Xl2zpssoVLD8Tuixtu0= guillermotti@guilles-mbp.lan'
+git config --global user.signingkey 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqodkVeDz0W02ExJzMWJoYDFNM9EltfL7BfVaYtkIPzdBrTGMY2NeEenRYUOdliDxEOdKn813T9AjX3n++pbeo2eh30J6HssIij4SAUh5qczhkaGdBU2EEFaL7WGTEf75XdMT0CONEzV3m/w2z/w+UM6yEdIscLp6WHHL6VCsOJLlhBQYOM8ps5OGYKOJEKdJOYm2Iq/prkWXVLcaZOk1UbKfch86TMpbTdMdvikfZ2nT4+2XEgIkwXngAQWN24gPR1DjJRnUuJHXxJ582BVwo5WYyz837DDaNB3udYM1ld+fR4VJCsg6Dtrr1Y8IsPxWwni0ZjIQi+A7rQwjnslw2G7LNXG74rszFdk90WAcEq6TM82Qdj6FMqqVnaQlJLtmEs/xhYKJ8LpY+demTl4nQJvjNQVSi4Ps5FXYUoBt4CP/N/BOGmdG62dNFNXBmxfhhz80FnKMdCVwpHM5JQiQM08jaP2iE6A+9++I4t1N1V0YeN6NY2arYX1TWmydEvkU= guillermotti@GuilleVigil-MacBookPro'
 git config --global commit.gpgsign true  # if you want to sign every commit
 git config --global tag.gpgsign true  # if you want to sign every tag
 

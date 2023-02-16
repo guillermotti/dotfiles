@@ -4,7 +4,7 @@
 
 - Upload to drive existing files
 - Sync VSCode settings
-- Update important files in gist (.npmrc, .yarnrc, .aws/config, .zsh_history, .kube/config)
+- Update important files to a new private gist (.npmrc, .yarnrc, .aws/config, .zsh_history, .kube/config)
 
 ## Package manager
 
@@ -56,6 +56,10 @@ git clone git@github.com:guillermotti/dotfiles.git
 - Modify `git config --global user.signingkey` value with the public SSH key and run `git_setup.sh` script.
 - Restart the laptop to apply changes.
 
+## Set symlink to dotfiles
+
+- Run `symlinks.sh` script.
+
 ## Installing software via Homebrew
 
 All software installed on the system must be listed in `.Brewfile`. This is
@@ -96,13 +100,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
   - Import config from *.rayconfig
   - Set directory to script commands
 - **VSCode**
-  - Install "Settings Sync" extension and reload.
-  - Run '> Sync: Download Settings'
-  - Enter gist ID in `vscode.sync` file to prompt.
-  - Once extensions are installed 'Reload' (or Restart)
-  - Run '> Sync: Update/Upload Settings'
-  - Create a token with 'gist' permissions and save it to the prompt
-  - Wait for the Sync Summary.
+  - Turn Settings Sync on.
 
 ## Pass Configuration
 
@@ -112,12 +110,27 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 gpg --import private.asc
 ```
 
-2. Init pass following (this guide)[https://git.zx2c4.com/password-store/about/#EXTENDED%20GIT%20EXAMPLE]. Take into account:
+2. Run the following commands: 
 
-- The argument following `pass init` should be the name of the imported key (guillermotti).
-- The git remote should be set with the existing repo and a `pass git pull` and `pass git reset --hard origin/main` point to the existing HEAD.
+```sh
+pass init guillermotti
+pass git init
+pass git remote add origin <REPO>
+pass git reset --hard origin/main
+```
 
 3. Use the tool and check everything is working.
+
+### Troubleshooting
+
+```sh
+which pinentry-mac
+vim ~/.gnupg/gpg-agent.conf # set the path to pinentry-mac binary at the end of the file
+```
+
+```sh
+gpgconf --kill gpg-agent
+```
 
 
 ## Copy files from Gist
@@ -127,8 +140,3 @@ gpg --import private.asc
 - .yarnrc
 - .aws/config
 - .kube/config
-
-## Symlinks
-
-- Run `symlinks.sh` script.
-
