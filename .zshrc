@@ -151,13 +151,13 @@ fpath=("$HOMEBREW/share/zsh-completions" $fpath)
 fpath=("$HOMEBREW/share/zsh/site-functions" $fpath)
 
 # gcloud completion scripts via brew cask installation
-if [ -f "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then # brew cask installation
-	export CLOUDSDK_PYTHON="$HOMEBREW/opt/python@3.10/libexec/bin/python"
-	source "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-	source "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-else
-	echo "WARNING: skipping loading gcloud completion"
-fi
+# if [ -f "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then # brew cask installation
+# 	export CLOUDSDK_PYTHON="$HOMEBREW/opt/python@3.10/libexec/bin/python"
+# 	source "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+# 	source "$HOMEBREW/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+# else
+# 	echo "WARNING: skipping loading gcloud completion"
+# fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

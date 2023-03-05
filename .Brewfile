@@ -101,7 +101,7 @@ cask "visual-studio-code"
 # cask "insomnia"
 
 # Tools
-# cask "authy"
+cask "authy"
 # cask "fig"
 
 # Desktop Software
