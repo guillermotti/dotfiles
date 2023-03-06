@@ -75,11 +75,13 @@ brew bundle --global
 
 - iTerm2->Profiles->Open Profiles->Edit Profiles...->Add `iterm.json`.
     - Restart iTerm2.
-- Install oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
-- Install powerlevel10k theme: https://github.com/romkatv/powerlevel10k
-- Install plugins:
+- Install oh-my-zsh, powerlevel10k theme and plugins:
 
 ```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # install oh-my-zsh https://ohmyz.sh/
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+p10k configure # configure powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
