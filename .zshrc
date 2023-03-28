@@ -182,3 +182,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+export TFENV_ARCH=amd64
