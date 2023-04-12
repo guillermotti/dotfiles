@@ -22,7 +22,6 @@ brew "bash-completion"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
-# brew "wget"
 # brew "coreutils"
 brew 'diff-so-fancy'
 brew "fzf"
@@ -50,6 +49,7 @@ brew "awscli"
 # cask "google-cloud-sdk"
 # brew "mongodb/brew/mongodb-community"
 # brew "postgresql@14"
+brew "mysql"
 # brew "redis"
 # brew "firebase-cli"
 brew "lsd"
@@ -69,11 +69,17 @@ brew "pass"
 # brew "terragrunt"
 brew "granted"
 # brew "deno"
+brew "openssh"
 
-# Commit signing
-brew 'pinentry-mac'
+# GPG + Yubikey
 brew 'gnupg'
-# cask 'keybase'
+brew 'yubikey-personalization'
+brew 'hopenpgp-tools'
+brew 'ykman' # An additional Python package dependency may need to be installed to use ykman - pip install yubikey-manager
+brew 'pinentry-mac'
+brew "wget"
+
+cask 'keybase'
 # brew 'gitsign'
 
 # Containers
