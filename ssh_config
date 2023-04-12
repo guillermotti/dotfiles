@@ -2,10 +2,15 @@
 IgnoreUnknown UseKeychain
 
 Host github.com *.github.com
-HostName github.com
-User git
-IdentityFile ~/.ssh/github_rsa
-UseKeychain yes
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/ed25519_github
+
+Host gitlab.com *.gitlab.com
+    PreferredAuthentications publickey
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/ed25519_gitlab
 
 Host *
 ServerAliveInterval 10
