@@ -1,7 +1,7 @@
 [user]
-	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqodkVeDz0W02ExJzMWJoYDFNM9EltfL7BfVaYtkIPzdBrTGMY2NeEenRYUOdliDxEOdKn813T9AjX3n++pbeo2eh30J6HssIij4SAUh5qczhkaGdBU2EEFaL7WGTEf75XdMT0CONEzV3m/w2z/w+UM6yEdIscLp6WHHL6VCsOJLlhBQYOM8ps5OGYKOJEKdJOYm2Iq/prkWXVLcaZOk1UbKfch86TMpbTdMdvikfZ2nT4+2XEgIkwXngAQWN24gPR1DjJRnUuJHXxJ582BVwo5WYyz837DDaNB3udYM1ld+fR4VJCsg6Dtrr1Y8IsPxWwni0ZjIQi+A7rQwjnslw2G7LNXG74rszFdk90WAcEq6TM82Qdj6FMqqVnaQlJLtmEs/xhYKJ8LpY+demTl4nQJvjNQVSi4Ps5FXYUoBt4CP/N/BOGmdG62dNFNXBmxfhhz80FnKMdCVwpHM5JQiQM08jaP2iE6A+9++I4t1N1V0YeN6NY2arYX1TWmydEvkU= guillermotti@GuilleVigil-MacBookPro
+	signingkey = 83DF85856458AFDC
 	name = Guille Vigil
-	email = guillermovigilr@gmail.com
+	email = guille.vigil@bvnk.com
 [commit]
 	gpgsign = true
 [pull]
@@ -10,9 +10,10 @@
 	helper = osxkeychain
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	pushInsteadOf = https://gitlab.com/
 [gpg]
 	program = gpg
-	format = ssh
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/guillermotti/.gitignore_global
@@ -37,3 +38,9 @@
 	defaultBranch = main
 [tag]
 	gpgsign = true
+[protocol "http"]
+	allow = never
+[protocol "git"]
+	allow = never
+[url "https://"]
+	insteadOf = git://
