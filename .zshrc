@@ -191,3 +191,7 @@ reveal () {
         output=$(echo "${1}" | rev | cut -c16- | rev)
         gpg --decrypt --output ${output} "${1}" && echo "${1} -> ${output}"
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
