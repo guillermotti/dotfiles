@@ -71,6 +71,7 @@ brew "pass"
 brew "granted"
 # brew "deno"
 brew "openssh"
+brew "yq"
 
 # GPG + Yubikey
 brew 'gnupg'
