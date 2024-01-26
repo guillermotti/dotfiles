@@ -75,6 +75,7 @@ brew "openssh"
 brew "yq"
 brew "conftest"
 brew "jsonnet"
+brew "jsonnet-bundler"
 
 # GPG + Yubikey
 brew 'gnupg'
