@@ -110,6 +110,7 @@ brew "colima"
 # brew "derailed/k9s/k9s"
 # cask "lens"
 brew "weaveworks/tap/eksctl"
+brew "flyctl"
 
 # VMs
 # brew "lima"
